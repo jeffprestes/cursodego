@@ -22,6 +22,7 @@ func main() {
 
 	fmt.Printf("Casa é: %+v\r\n", casa)
 
+	//objJSON, _ := json.Marshal(casa)
 	objJSON, err := json.Marshal(casa)
 	if err != nil {
 		fmt.Println("[main] Houve um erro na geracao do objeto JSON: ", err.Error())

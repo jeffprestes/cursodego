@@ -7,7 +7,7 @@ type Galinha interface {
 
 //Pata representa uma ave do tipo Pato
 type Pata interface {
-	Quack() string
+	Grasna() string
 }
 
 //Ave representa um animal
@@ -20,7 +20,7 @@ func (a Ave) Cacareja() string {
 	return "Cócóricó..."
 }
 
-//Quack retorna o som emitido por uma pata
-func (a Ave) Quack() string {
+//Grasna retorna o som emitido por uma pata
+func (a Ave) Grasna() string {
 	return "Quack, quack..."
 }

@@ -23,8 +23,18 @@ func main() {
 
 	if cidade == "Teste" {
 		fmt.Println("O cliente vive no estado Teste")
+	} else if cidade == "Athenas" {
+		fmt.Println("O cliente vive em Athenas.")
+	} else {
+		fmt.Println("O cliente não vive no estado Teste")
 	}
 
+	/*
+		descricao, status := haQuantoTempoEstaDevendo(meses)
+		if status {
+
+		}
+	*/
 	if descricao, status := haQuantoTempoEstaDevendo(meses); status {
 		fmt.Println("Qual a situação do cliente? ", descricao)
 		return
