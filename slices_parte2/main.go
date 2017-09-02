@@ -30,6 +30,7 @@ func main() {
 	indiceDoItemARetirar := 2
 	temp := cidades[:indiceDoItemARetirar]
 	temp = append(temp, cidades[indiceDoItemARetirar+1:]...)
+	cidades = make([]string, len(temp))
 	copy(cidades, temp)
 	fmt.Println(cidades)
 }
