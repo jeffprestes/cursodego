@@ -17,7 +17,7 @@ var Db *sql.DB
 func AbreConexaoComBancoDeDadosSQL() (err error) {
 	err = nil
 	//Db, err = sqlx.Open("mysql", "root@tcp(127.0.0.1:3306)/cursodego")
-	Db, err := sql.Open("oci8", "ricardogs/ricardogs@10.113.0.227:1536/db2.uninove.br")
+	Db, err = sql.Open("oci8", "ricardogs/ricardogs@10.113.0.227:1536/db2.uninove.br")
 	if err != nil {
 		return
 	}
@@ -36,7 +36,7 @@ func GetDB() (db *sql.DB, err error) {
 		return
 	}
 	//Db, err = sqlx.Open("mysql", "root@tcp(127.0.0.1:3306)/cursodego")
-	Db, err := sql.Open("oci8", "ricardogs/ricardogs@10.113.0.227:1536/db2.uninove.br")
+	Db, err = sql.Open("oci8", "ricardogs/ricardogs@10.113.0.227:1536/db2.uninove.br")
 	if err != nil {
 		return
 	}
@@ -46,5 +46,4 @@ func GetDB() (db *sql.DB, err error) {
 	}
 	db = Db
 	return
-
 }

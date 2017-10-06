@@ -13,23 +13,11 @@ func init() {
 }
 
 func main() {
-	//repo.TestOracle()
 	err := repo.AbreConexaoComBancoDeDadosSQL()
 	if err != nil {
 		fmt.Println("Parando a carga do servidor. Erro ao abrir o banco de dados: ", err.Error())
 		return
 	}
-	db, err := repo.GetDB()
-	if err != nil {
-		fmt.Println("Deu ruim")
-		return
-	}
-	err = db.Ping()
-	if err != nil {
-		fmt.Println("Deu ruim")
-		return
-	}
-	fmt.Println("Conectou")
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintln(w, "Olá Mundo!")
