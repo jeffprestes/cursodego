@@ -19,9 +19,16 @@ func main() {
 	fmt.Printf("chacara é: %p - %+v\r\n", &chacara, chacara)
 	mudaImovel(&chacara)
 	fmt.Printf("chacara é: %p - %+v\r\n", &chacara, chacara)
+	mudaImovelSemPonteiro(chacara)
+	fmt.Printf("chacara é: %p - %+v\r\n", &chacara, chacara)
 }
 
 func mudaImovel(imovel *Imovel) {
+	imovel.X = imovel.X + 10
+	imovel.Y = imovel.Y - 5
+}
+
+func mudaImovelSemPonteiro(imovel Imovel) {
 	imovel.X = imovel.X + 10
 	imovel.Y = imovel.Y - 5
 }

@@ -18,6 +18,7 @@ func main() {
 		fmt.Println("[main] Houve um erro ao abrir o arquivo. Erro: ", err.Error())
 		return
 	}
+	defer arquivo.Close()
 
 	leitorCsv := csv.NewReader(arquivo)
 	conteudo, err := leitorCsv.ReadAll()
@@ -31,6 +32,7 @@ func main() {
 		fmt.Println("[main] Houve um erro ao criar o arquivo JSON. Erro: ", err.Error())
 		return
 	}
+	defer arquivoJSON.Close()
 
 	escritor := bufio.NewWriter(arquivoJSON)
 	escritor.WriteString("[\r\n")
@@ -53,6 +55,4 @@ func main() {
 	}
 	escritor.WriteString("\r\n]")
 	escritor.Flush()
-	arquivoJSON.Close()
-	arquivo.Close()
 }

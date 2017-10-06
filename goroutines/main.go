@@ -7,9 +7,8 @@ import (
 	"fmt"
 	"os"
 	"strings"
-	"time"
-
 	"sync"
+	"time"
 
 	"github.com/jeffprestes/cursodego/goroutines/model"
 )

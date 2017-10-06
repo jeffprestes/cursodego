@@ -26,7 +26,7 @@ func main() {
 		return
 	}
 
-	request, err := http.NewRequest("POST", "https://requestb.in/1gswngo1", bytes.NewBuffer(conteudoEnviar))
+	request, err := http.NewRequest("POST", "https://requestb.in/tjwcmutj", bytes.NewBuffer(conteudoEnviar))
 	if err != nil {
 		fmt.Println("[main] Erro ao criar um request para o request bin. Erro: ", err.Error())
 		return

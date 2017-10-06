@@ -2,11 +2,15 @@ package manipulador
 
 import (
 	"fmt"
+	"html/template"
 	"net/http"
 	"time"
 
 	"github.com/jeffprestes/cursodego/servidor_web/model"
 )
+
+//Modelos armazena os modelos de pagina que serão executados pelos manipuladores
+var Modelos = template.Must(template.ParseFiles("html/ola.html"))
 
 //Ola é o manipulador da requisição a rota /ola
 func Ola(w http.ResponseWriter, r *http.Request) {

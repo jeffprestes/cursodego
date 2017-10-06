@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
 	capitais := []string{"Lisboa"}
@@ -33,4 +36,5 @@ func main() {
 	cidades = make([]string, len(temp))
 	copy(cidades, temp)
 	fmt.Println(cidades)
+	time.Sleep(10 * time.Second)
 }
