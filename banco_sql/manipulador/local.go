@@ -27,20 +27,11 @@ func Local(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	sql := "select country, city, telcode from place where telcode = :codigoTel"
-	linha, err := db.Query(sql, codigoTelefone)
+	err = db.Get(&local, sql, codigoTelefone)
 	if err != nil {
 		http.Error(w, "Não foi possível pesquisar esse numero.", http.StatusInternalServerError)
 		fmt.Println("[local] nao foi possível executar a query: ", sql, " Erro: ", err.Error())
 		return
-	}
-	defer linha.Close()
-	for linha.Next() {
-		err = linha.Scan(&local.Pais, &local.Cidade, &local.CodigoTelefonico)
-		if err != nil {
-			http.Error(w, "Não foi possível pesquisar esse numero.", http.StatusInternalServerError)
-			fmt.Println("[local] nao foi fazer o binding dos dados do banco na struct: ", err.Error())
-			return
-		}
 	}
 	if err := ModeloLocal.ExecuteTemplate(w, "local.html", local); err != nil {
 		http.Error(w, "Houve um erro na renderização da página.", http.StatusInternalServerError)
