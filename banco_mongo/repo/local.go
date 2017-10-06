@@ -19,6 +19,7 @@ func SalvaLog(reg model.RegistroLog) (err error) {
 	sessao := SessaoMongo.Copy()
 	defer sessao.Close()
 	colecao := sessao.DB("cursodego").C("logvisitas")
+	reg.ID = bson.NewObjectId()
 	err = colecao.Insert(reg)
 	return
 }
