@@ -26,8 +26,8 @@ func main() {
 		}
 	}
 
-	texto := "Eu adoro escrever programas usando Go"
+	texto := "Eu adoro escrever programas usando Go. São ou ção"
 	for indice, letra := range texto {
-		fmt.Printf("Texto[%d] = %q\r\n", indice, letra)
+		fmt.Printf("Texto[%d] = %+v - %s\r\n", indice, letra, string(letra))
 	}
 }

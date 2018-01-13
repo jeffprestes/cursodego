@@ -11,14 +11,16 @@ func main() {
 	fmt.Println(capitais, len(capitais), cap(capitais))
 	capitais = append(capitais, "Brasília")
 	fmt.Println(capitais, len(capitais), cap(capitais))
+	capitais[1] = "Buenos Aires"
+	fmt.Println(capitais, len(capitais), cap(capitais))
+
 	cidades := make([]string, 4)
 	cidades[0] = "Nova York"
 	cidades[1] = "Londres"
 	cidades[2] = "Tokio"
 	cidades[3] = "Singapura"
 	fmt.Println(cidades, len(cidades), cap(cidades))
-	capitais[1] = "Brasilia"
-	fmt.Println(capitais, len(capitais), cap(capitais))
+
 	for indice, cidade := range cidades {
 		fmt.Printf("Cidade[%d] = %s\n\r", indice, cidade)
 	}
