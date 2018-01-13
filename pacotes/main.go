@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"bitbucket.org/novatrixbr/cursodego/pacotes/operadora"
-	"bitbucket.org/novatrixbr/cursodego/pacotes/prefixo"
+	"github.com/jeffprestes/cursodego/pacotes/operadora"
+	"github.com/jeffprestes/cursodego/pacotes/prefixo"
 )
 
 //NomeDoUsuario é o nome do usuário do sistema
