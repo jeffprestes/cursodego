@@ -22,15 +22,17 @@ func main() {
 	//Primeiro item começa com indice 0
 	//Segundo item começa com o indice 1
 	capitaisAsia := cidades[3:5]
-	fmt.Println(capitaisAsia)
+	fmt.Println("Capitais Asia: ", capitaisAsia)
 	temp1 := cidades[:2]
-	fmt.Println(temp1)
+	fmt.Println("Capitais anglo-saxonicas: ", temp1)
 	temp2 := cidades[len(cidades)-2:]
-	fmt.Println(temp2)
+	fmt.Println("Capitais asiaticas 2: ", temp2)
+	//Madeira não é anglo-saxonica nem asiatica
+	//Retirar
 	indiceDoItemARetirar := 2
 	temp := cidades[:indiceDoItemARetirar]
 	temp = append(temp, cidades[indiceDoItemARetirar+1:]...)
 	cidades = make([]string, len(temp))
 	copy(cidades, temp)
-	fmt.Println(cidades)
+	fmt.Println("Novo slice: ", cidades)
 }
