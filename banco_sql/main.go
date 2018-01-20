@@ -14,7 +14,7 @@ func init() {
 
 func main() {
 
-	err := repo.AbreConexaoComBancoDeDadosSQL()
+	_, err := repo.AbreConexaoComBancoDeDadosSQL()
 	if err != nil {
 		fmt.Println("Parando a carga do servidor. Erro ao abrir o banco de dados: ", err.Error())
 		return

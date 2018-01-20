@@ -5,6 +5,7 @@ import (
 	"encoding/csv"
 	"encoding/json"
 	"fmt"
+	"log"
 	"os"
 	"strings"
 	"time"
@@ -18,9 +19,11 @@ var orquestrador sync.WaitGroup
 
 func main() {
 	orquestrador.Add(2)
+	log.Println("****** Começando...")
 	go traduzirParaJSON("saopaulo")
 	go traduzirParaJSON("riodejaneiro")
 	orquestrador.Wait()
+	log.Println("****** Acabei! ******")
 }
 
 func traduzirParaJSON(nomeArquivo string) {
