@@ -13,13 +13,16 @@ import (
 
 //Local é o manipulador da requisição de rota /local/
 func Local(w http.ResponseWriter, r *http.Request) {
+
 	local := model.Local{}
+
 	codigoTelefone, err := strconv.Atoi(r.URL.Path[7:])
 	if err != nil {
 		http.Error(w, "Não foi enviado um numero válido. Verifique.", http.StatusBadRequest)
 		fmt.Println("[local] erro ao converter o numero enviado: ", err.Error())
 		return
 	}
+
 	db, err := repo.GetDBConnection()
 	if err != nil {
 		log.Println("[Local] Erro na conexao: ", err.Error())
