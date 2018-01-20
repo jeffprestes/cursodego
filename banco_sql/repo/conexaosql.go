@@ -16,7 +16,7 @@ var db *sqlx.DB
 //AbreConexaoComBancoDeDadosSQL funcao que abre a conexao com o banco MYSQL
 func AbreConexaoComBancoDeDadosSQL() (db *sqlx.DB, err error) {
 	err = nil
-
+	db, err = sqlx.Open("mysql", "root@tcp(localhost:3306)/cursodego?parseTime=true")
 	if err != nil {
 		log.Println("[AbreConexaoComBancoDeDadosSQL] Erro na conexao: ", err.Error())
 		return
