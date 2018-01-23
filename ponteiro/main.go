@@ -15,10 +15,15 @@ func main() {
 	casa := new(Imovel)
 	fmt.Printf("Casa é: %p - %+v\r\n", &casa, casa)
 
+	mudaImovel(casa)
+	fmt.Printf("casa é: %p - %+v\r\n", casa, casa)
+
 	chacara := Imovel{17, 28, "Chacara Linda", 280000}
 	fmt.Printf("chacara é: %p - %+v\r\n", &chacara, chacara)
+
 	mudaImovel(&chacara)
 	fmt.Printf("chacara é: %p - %+v\r\n", &chacara, chacara)
+
 }
 
 func mudaImovel(imovel *Imovel) {
