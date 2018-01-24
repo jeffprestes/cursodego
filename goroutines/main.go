@@ -54,17 +54,21 @@ func traduzirParaJSON(nomeArquivo string) {
 	for _, linha := range conteudo {
 		for indiceItem, item := range linha {
 			dados := strings.Split(item, "/")
-			cidade := model.Cidade{}
-			cidade.Nome = dados[0]
-			cidade.Estado = dados[1]
-			fmt.Printf("Cidade: %+v\r\n", cidade)
-			cidadeJSON, err := json.Marshal(cidade)
-			if err != nil {
-				fmt.Println("[main] Houve um erro ao gerar o json do item ", item, ". Erro: ", err.Error())
-			}
-			escritor.WriteString("  " + string(cidadeJSON))
-			if (indiceItem + 1) < len(linha) {
-				escritor.WriteString(",\r\n")
+			if len(dados) > 1 {
+				cidade := model.Cidade{}
+				cidade.Nome = dados[0]
+				cidade.Estado = dados[1]
+				fmt.Printf("Cidade: %+v\r\n", cidade)
+				cidadeJSON, err := json.Marshal(cidade)
+				if err != nil {
+					fmt.Println("[main] Houve um erro ao gerar o json do item ", item, ". Erro: ", err.Error())
+				}
+				escritor.WriteString("  " + string(cidadeJSON))
+				if (indiceItem + 1) < len(linha) {
+					escritor.WriteString(",\r\n")
+				}
+			} else {
+				fmt.Println("Erro no nome da cidade: ", dados)
 			}
 		}
 	}
