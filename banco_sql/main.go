@@ -9,16 +9,15 @@ import (
 )
 
 func init() {
-	//fmt.Println("Vamos começar a subir o servidor...")
-}
-
-func main() {
-
+	fmt.Println("Vamos começar a subir o servidor...")
 	_, err := repo.AbreConexaoComBancoDeDadosSQL()
 	if err != nil {
 		fmt.Println("Parando a carga do servidor. Erro ao abrir o banco de dados: ", err.Error())
 		return
 	}
+}
+
+func main() {
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintln(w, "Olá Mundo!")
