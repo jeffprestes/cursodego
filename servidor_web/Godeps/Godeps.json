@@ -1,0 +1,6 @@
+{
+	"ImportPath": "github.com/jeffprestes/cursodego/servidor_web",
+	"GoVersion": "go1.10",
+	"GodepVersion": "v79",
+	"Deps": []
+}
