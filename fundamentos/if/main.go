@@ -13,10 +13,12 @@ func main() {
 		fmt.Println("Esse credor deve há pouco tempo.")
 	}
 
+	//if situacao == true {
 	if situacao {
 		fmt.Println("Ele esta devendo")
 	}
 
+	//if situacao == false {
 	if !situacao {
 		fmt.Println("Ele esta adimplente")
 	}

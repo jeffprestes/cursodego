@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/jeffprestes/cursodego/structs_avancado/model"
+	"github.com/jeffprestes/cursodego/fundamentos/structs_avancado/model"
 )
 
 func main() {
@@ -21,4 +21,11 @@ func main() {
 
 	fmt.Println("A casa em JSON: ", string(objJSON))
 
+	casa.DobraValor()
+	fmt.Printf("O valor da casa é: %d\r\n", casa.GetValor())
+
+	model.TriplicaValor(&casa)
+	fmt.Printf("O valor da casa é: %d\r\n", casa.GetValor())
+
+	casa = model.QuadruplicaValor(casa)
 }

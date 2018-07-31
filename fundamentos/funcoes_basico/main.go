@@ -1,7 +1,9 @@
 package main
 
+//funcoes_basico
+
 import "fmt"
-import "github.com/jeffprestes/cursodego/funcoes_basico/matematica"
+import "github.com/jeffprestes/cursodego/fundamentos/funcoes_basico/matematica"
 
 func main() {
 

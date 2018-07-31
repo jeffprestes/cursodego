@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-import "github.com/jeffprestes/cursodego/funcoes_avancado/matematica"
+import "github.com/jeffprestes/cursodego/fundamentos/funcoes_avancado/matematica"
 
 func main() {
 	resultado := matematica.Calculo(matematica.Multiplicador, 2, 2)

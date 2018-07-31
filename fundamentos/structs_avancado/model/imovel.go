@@ -14,13 +14,22 @@ func (i *Imovel) SetValor(valor int) {
 }
 
 //DobraValor dobra o valor informado
-func (i *Imovel) DobraValor(valor int) (resultado int) {
-	i.valor = valor
-	resultado = i.valor * 2
+func (i *Imovel) DobraValor() {
+	i.valor = i.valor * 2
 	return
 }
 
 //GetValor retorna o valor do Imovel
 func (i *Imovel) GetValor() int {
 	return i.valor
+}
+
+//TriplicaValor triplica valor
+func TriplicaValor(i *Imovel) {
+	i.valor = i.valor * 3
+}
+
+func QuadruplicaValor(i Imovel) (x Imovel) {
+	x.valor = i.valor * 4
+	return
 }
