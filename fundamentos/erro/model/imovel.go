@@ -18,7 +18,7 @@ var ErrValorDeImovelInvalido = errors.New("O valor informado não é valido para
 /*
 ErrValorDeImovelMuitoAlto é um erro que é apresentado quando é atribuído ao imóvel um valor muito alto fora do mercado
 */
-var ErrValorDeImovelMuitoAlto = errors.New("O valor informado é muito alto.")
+var ErrValorDeImovelMuitoAlto = errors.New("O valor informado é muito alto")
 
 //GetValor obtem o valor do Imovel
 func (i *Imovel) GetValor() int {

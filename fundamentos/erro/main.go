@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/jeffprestes/cursodego/erro/model"
+	"github.com/jeffprestes/cursodego/fundamentos/erro/model"
 )
 
 func main() {
