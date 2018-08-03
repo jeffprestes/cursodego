@@ -1,7 +1,7 @@
 package repo
 
 import (
-	"github.com/jeffprestes/cursodego/banco_mongo/model"
+	"github.com/jeffprestes/cursodego/avancado/banco_mongo/model"
 	"gopkg.in/mgo.v2/bson"
 )
 

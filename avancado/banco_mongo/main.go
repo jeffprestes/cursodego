@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/jeffprestes/cursodego/banco_mongo/manipulador"
-	"github.com/jeffprestes/cursodego/banco_mongo/repo"
+	"github.com/jeffprestes/cursodego/avancado/banco_mongo/manipulador"
+	"github.com/jeffprestes/cursodego/avancado/banco_mongo/repo"
 )
 
 func init() {

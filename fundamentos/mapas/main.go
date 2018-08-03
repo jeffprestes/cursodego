@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/jeffprestes/cursodego/mapas/model"
+	"github.com/jeffprestes/cursodego/fundamentos/mapas/model"
 )
 
 var cache map[string]model.Imovel
