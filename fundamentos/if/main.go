@@ -46,6 +46,7 @@ func main() {
 	//fmt.Println("Me passa o status?", descricao)
 
 	fmt.Println("Obrigado por nos consultar")
+
 }
 
 func haQuantoTempoEstaDevendo(meses int) (descricao string, status bool) {
