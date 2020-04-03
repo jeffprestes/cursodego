@@ -28,4 +28,9 @@ func main() {
 	fmt.Printf("O valor da casa é: %d\r\n", casa.GetValor())
 
 	casa = model.QuadruplicaValor(casa)
+
+	//Criando um objeto a partir de uma struct mas com a criação
+	//sendo encapsulada com um metodo New ou Novo
+	meuMovel := model.NovoMovel(1, 2, 100, "estante")
+	fmt.Println("Na casa", casa.Nome, " tem um movel chamado", meuMovel.Nome)
 }
