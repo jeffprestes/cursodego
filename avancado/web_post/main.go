@@ -26,7 +26,8 @@ func main() {
 		return
 	}
 
-	request, err := http.NewRequest("POST", "https://requestb.in/1gswngo1", bytes.NewBuffer(conteudoEnviar))
+	//Visite https://postb.in , crie seu endpoint e altere na linha abaixo
+	request, err := http.NewRequest("POST", "https://postb.in/b/1588883267591-7930491962470", bytes.NewBuffer(conteudoEnviar))
 	if err != nil {
 		fmt.Println("[main] Erro ao criar um request para o request bin. Erro: ", err.Error())
 		return
